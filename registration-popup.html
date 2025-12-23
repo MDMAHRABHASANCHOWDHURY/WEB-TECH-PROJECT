@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Status</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="registration-popup.css">
+</head>
+<body>
+
+    <div class="popup-container">
+        <header class="popup-header">
+            <img src="logo.png" alt="Blood For Need Logo">
+            <h2>Blood For Need</h2>
+        </header>
+
+        <div class="popup-content">
+            <p id="message"></p>
+
+            <button onclick="goToLogin()">OK</button>
+        </div>
+    </div>
+
+    <script>
+    const params = new URLSearchParams(window.location.search);
+    const role = params.get("role");
+    const messageEl = document.getElementById("message");
+
+    if (role === "medical" || role === "admin")
+    {
+        messageEl.innerText =
+            "Your Registration Has Been Submitted.\n\n" +
+            "Please Wait For Administration To Confirm Your Registration.\n" +
+            "This Process May Take Upto 48 Hours.";
+    } 
+
+    else 
+    {
+        messageEl.innerText =
+            "Your Registration is Successful.\n\nYou Can Now Login.";
+    }
+
+    function goToLogin() 
+    {
+        if (window.opener && !window.opener.closed) 
+        {
+            window.opener.location.href = "login.html";
+        }
+        window.close();
+    }
+</script>
+
+</body>
+</html>

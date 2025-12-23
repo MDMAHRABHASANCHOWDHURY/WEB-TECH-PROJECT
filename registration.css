@@ -1,0 +1,329 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body 
+{
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fc;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container 
+{
+    width: 100%;
+    max-width: 500px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+header 
+{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header .logo 
+{
+    margin-bottom: 20px;
+}
+
+header .logo img 
+{
+    width: 120px;
+    height: auto;
+}
+
+header h1 
+{
+    font-size: 32px;
+    color: #d9534f;
+    margin-top: 10px;
+}
+
+.register-form 
+{
+    display: flex;
+    flex-direction: column;
+}
+
+h2 
+{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.input-group 
+{
+    margin-bottom: 15px;
+}
+
+.input-group label 
+{
+    font-size: 14px;
+    color: #555;
+}
+
+.input-group input 
+{
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+::placeholder 
+{
+    color: #999;
+    font-size: 14px;
+}
+
+.input-group input:focus 
+{
+    outline: none;
+    border-color: #d9534f;
+    box-shadow: 0 0 4px rgba(217, 83, 79, 0.4);
+}
+
+#phone 
+{
+    letter-spacing: 0.5px;
+}
+
+.role-selection 
+{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.role-option 
+{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.role-option input 
+{
+    margin: 0;
+}
+
+.role-option:hover 
+{
+    color: #d9534f;
+}
+
+.register-btn 
+{
+    background-color: #d9534f;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.register-btn:hover 
+{
+    background-color: #c9302c;
+}
+
+.register-btn:active 
+{
+    transform: scale(0.98);
+}
+
+.login-link 
+{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login-link a 
+{
+    color: #d9534f;
+    text-decoration: none;
+}
+
+.login-link a:hover 
+{
+    text-decoration: underline;
+}
+
+footer 
+{
+    width: 100%;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 14px;
+    color: #555;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05);
+}
+
+footer .contact-info p 
+{
+    margin-bottom: 5px;
+}
+
+.password-wrapper 
+{
+    position: relative;
+}
+
+.password-wrapper input 
+{
+    width: 100%;
+    padding-right: 40px;
+}
+
+.password-field {
+    position: relative;
+    width: 100%;
+}
+
+.password-field input {
+    width: 100%;
+    padding: 12px 45px 12px 12px;
+    font-size: 14px;
+}
+
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+    font-size: 18px;
+    color: #555;
+}
+
+.toggle-password:hover {
+    color: #000;
+}
+
+
+.terms-group 
+{
+    margin: 15px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.terms-group input 
+{
+    margin-right: 6px;
+}
+
+.terms-group a 
+{
+    color: #d9534f;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.terms-group a:hover 
+{
+    text-decoration: underline;
+}
+
+
+@media screen and (max-width: 768px) 
+{
+    .container 
+    {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    header h1 
+    {
+        font-size: 28px;
+    }
+
+    header .logo img 
+    {
+        width: 100px;
+    }
+
+    .input-group input 
+    {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .register-btn 
+    {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    footer .contact-info p 
+    {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 1024px) 
+{
+    .container 
+    {
+        max-width: 80%;
+        padding: 25px;
+    }
+
+    header h1 
+    {
+        font-size: 30px;
+    }
+
+    header .logo img 
+    {
+        width: 110px;
+    }
+
+    .register-btn 
+    {
+        padding: 11px;
+    }
+}
+
+@media screen and (min-width: 1025px) 
+{
+    .container 
+    {
+        max-width: 600px;
+        padding: 40px;
+    }
+
+    header h1 
+    {
+        font-size: 36px;
+    }
+
+    header .logo img 
+    {
+        width: 150px;
+    }
+}
